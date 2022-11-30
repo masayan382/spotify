@@ -1,6 +1,7 @@
 import { getProviders, signIn } from "next-auth/react"
 
 const login = ({ providers }) => {
+    console.log(providers);
 
     return (
         <div className="flex flex-col items-center bg-black min-h-screen w-full justify-center">
@@ -14,6 +15,9 @@ const login = ({ providers }) => {
                 <div
                     key={provider.name}
                     className="bg-[#18D860] text-white p-5 rounded-full"
+                    onClick={() => {
+                        signIn(provider.id, { callbackUrl: "/" })
+                    }}
                 >
                     <button>Login width {provider.name}</button>
                 </div>
