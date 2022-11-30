@@ -1,7 +1,6 @@
 import { getProviders, signIn } from "next-auth/react"
 
 const login = ({ providers }) => {
-    console.log(providers);
 
     return (
         <div className="flex flex-col items-center bg-black min-h-screen w-full justify-center">
