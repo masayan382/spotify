@@ -19,7 +19,8 @@ export function useSonginfo () {
                             Authorization: `Bearer ${spotifyApi.getAccessToken()}`
                         }
                     }
-                )
+                ).then(res => res.json())
+                setSonginfo(trackInfo)
 
             }
         }
