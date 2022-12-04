@@ -46,7 +46,7 @@ function Sidebar () {
                 </button>
                 <button className="flex items-center space-x-2 hover:text-white">
                     <HomeIcon className="h-5 w-5" />
-                    <p>Homet</p>
+                    <p>Home</p>
                 </button>
                 <button className="flex items-center space-x-2 hover:text-white">
                     <MagnifyingGlassIcon className="h-5 w-5" />
