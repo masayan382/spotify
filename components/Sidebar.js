@@ -3,9 +3,12 @@ import {
     MagnifyingGlassIcon,
     BuildingLibraryIcon,
     PlusCircleIcon,
-    HeartIcon,
+    // HeartIcon,
     RssIcon,
 } from "@heroicons/react/24/outline"
+import {
+    HeartIcon,
+} from "@heroicons/react/24/solid"
 import { signOut, useSession } from "next-auth/react"
 import { useEffect, useState } from "react"
 import useSpotify from "../hooks/useSpotify"
@@ -49,11 +52,11 @@ function Sidebar () {
                 </button>
                 <hr className="border-t-[0.1px] border-gray-900" />
                 {/*  */}
-                <button className="flex items-center space-x-2 hover:text-white">
+                <button className="flex items-center  space-x-2 hover:text-white">
                     <PlusCircleIcon className="h-5 w-5" />
                     <p>Create PlayList</p>
                 </button>
-                <button className="flex items-center space-x-2 hover:text-white">
+                <button className="flex items-center text-blue-500 space-x-2 hover:text-white">
                     <HeartIcon className="h-5 w-5" />
                     <p>Liked Songs</p>
                 </button>
