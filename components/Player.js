@@ -3,7 +3,7 @@ import useSpotify from "../hooks/useSpotify"
 import { currentTrackIdState, isPlayingState } from '../atoms/songAtom'
 import { useRecoilState } from 'recoil'
 import { useCallback, useEffect, useState } from "react"
-import { useSonginfo } from "../hooks/useSonginfo"
+import useSongInfo from "../hooks/useSongInfo"
 import { ArrowsRightLeftIcon, ArrowUturnLeftIcon, BackwardIcon, ForwardIcon, SpeakerWaveIcon, PlayCircleIcon, PauseCircleIcon } from "@heroicons/react/24/solid"
 import { SpeakerXMarkIcon } from "@heroicons/react/24/outline"
 import { debounce } from "lodash"
@@ -14,11 +14,11 @@ function Player () {
     const [currentTrackId, setCurrentTrackId] = useRecoilState(currentTrackIdState)
     const [isPlaying, setIsPlaying] = useRecoilState(isPlayingState)
     const [volume, setVolume] = useState(50)
-    const songInfo = useSonginfo()
+    const songInfo = useSongInfo()
 
     const fetchCurrentSong = () => {
         if (!songInfo) {
-            spotifyApi.getMyCurrentPlayingTrack().then(data => {
+            spotifyApi.getMyCurrentPlayingTrack().then((data) => {
                 setCurrentTrackId(data.body?.item?.id)
             })
             spotifyApi.getMyCurrentPlaybackState().then((data) => {
@@ -38,7 +38,6 @@ function Player () {
         })
     }
 
-
     useEffect(() => {
         if (spotifyApi.getAccessToken() && !currentTrackId) {
             fetchCurrentSong()
@@ -57,6 +56,7 @@ function Player () {
             spotifyApi.setVolume(volume).catch((err) => { })
         }, 100), []
     })
+
     return (
         <div className="h-24 bg-gradient-to-b from-black to-gray-900 text-white grid grid-cols-3 text-xs md:text-base px-2 md:px-8">
             {/* left */}
