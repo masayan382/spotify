@@ -23,7 +23,7 @@ function useSongInfo () {
                 setSongInfo(trackInfo)
             }
         }
-
+        fetchSongInfo()
     }, [currentTrackId, sptifyApi])
     return songInfo
 }
