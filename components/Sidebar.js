@@ -72,7 +72,7 @@ function Sidebar () {
                     </p>
                 ))}
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -18,7 +18,7 @@ const login = ({ providers }) => {
                         signIn(provider.id, { callbackUrl: "/" })
                     }}
                 >
-                    <button>Login width {provider.name}</button>
+                    <button>Login widh {provider.name}</button>
                 </div>
             ))}
         </div>
