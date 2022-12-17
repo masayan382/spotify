@@ -18,7 +18,7 @@
     "react-dom": "18.2.0",
     "recoil": "^0.7.6",
     "spotify-web-api-node": "^5.0.2",
-    "superagent": "^8.0.6",
+    "superagent": "^7.0.2",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
