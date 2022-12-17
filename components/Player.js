@@ -3,7 +3,7 @@ import useSpotify from "../hooks/useSpotify"
 import { currentTrackIdState, isPlayingState } from '../atoms/songAtom'
 import { useRecoilState } from 'recoil'
 import { useCallback, useEffect, useState } from "react"
-import useSongInfo from "../hooks/useSongInfo"
+import useSongInfo from "../hooks/useSonginfo"
 import { ArrowsRightLeftIcon, ArrowUturnLeftIcon, BackwardIcon, ForwardIcon, SpeakerWaveIcon, PlayCircleIcon, PauseCircleIcon } from "@heroicons/react/24/solid"
 import { SpeakerXMarkIcon } from "@heroicons/react/24/outline"
 import { debounce } from "lodash"
